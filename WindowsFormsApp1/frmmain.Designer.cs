@@ -34,13 +34,17 @@
             this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saoLưuVàPhụcHồiDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kếtThúcChươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhMụcTừĐiểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sốLiệuPhátSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hệThốngToolStripMenuItem});
+            this.hệThốngToolStripMenuItem,
+            this.dữLiệuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 29);
@@ -83,14 +87,36 @@
             this.kếtThúcChươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
             this.kếtThúcChươngTrìnhToolStripMenuItem.Text = "Kết thúc chương trình";
             // 
-            // Form1
+            // dữLiệuToolStripMenuItem
+            // 
+            this.dữLiệuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.danhMụcTừĐiểnToolStripMenuItem,
+            this.sốLiệuPhátSinhToolStripMenuItem});
+            this.dữLiệuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dữLiệuToolStripMenuItem.Name = "dữLiệuToolStripMenuItem";
+            this.dữLiệuToolStripMenuItem.Size = new System.Drawing.Size(71, 25);
+            this.dữLiệuToolStripMenuItem.Text = "Dữ liệu";
+            // 
+            // danhMụcTừĐiểnToolStripMenuItem
+            // 
+            this.danhMụcTừĐiểnToolStripMenuItem.Name = "danhMụcTừĐiểnToolStripMenuItem";
+            this.danhMụcTừĐiểnToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.danhMụcTừĐiểnToolStripMenuItem.Text = "1. Danh mục từ điển";
+            // 
+            // sốLiệuPhátSinhToolStripMenuItem
+            // 
+            this.sốLiệuPhátSinhToolStripMenuItem.Name = "sốLiệuPhátSinhToolStripMenuItem";
+            this.sốLiệuPhátSinhToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.sốLiệuPhátSinhToolStripMenuItem.Text = "2. Số liệu phát sinh";
+            // 
+            // frmmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "frmmain";
             this.Text = "Phần mềm quản lý thuốc";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -107,6 +133,9 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýNgườiDùngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saoLưuVàPhụcHồiDữLiệuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kếtThúcChươngTrìnhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dữLiệuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem danhMụcTừĐiểnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sốLiệuPhátSinhToolStripMenuItem;
     }
 }
 
