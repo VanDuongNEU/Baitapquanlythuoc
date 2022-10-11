@@ -31,5 +31,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
