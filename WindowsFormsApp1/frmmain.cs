@@ -36,5 +36,11 @@ namespace WindowsFormsApp1
         {
             Application.Exit();
         }
+
+        private void daToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dmnh f = new dmnh();
+            f.Show();
+        }
     }
 }
