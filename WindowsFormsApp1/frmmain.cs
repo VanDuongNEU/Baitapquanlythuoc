@@ -42,5 +42,16 @@ namespace WindowsFormsApp1
             dmnh f = new dmnh();
             f.Show();
         }
+
+        private void danhMụcNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dmnv f = new dmnv();
+            f.Show();
+        }
+
+        private void kếtThúcChươngTrìnhToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="dmnh.Designer.cs">
       <DependentUpon>dmnh.cs</DependentUpon>
     </Compile>
+    <Compile Include="dmnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dmnv.Designer.cs">
+      <DependentUpon>dmnv.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmmain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,8 +71,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNHTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLNHTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHTDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="dmnh.resx">
       <DependentUpon>dmnh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dmnv.resx">
+      <DependentUpon>dmnv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmmain.resx">
       <DependentUpon>frmmain.cs</DependentUpon>
@@ -99,6 +113,17 @@
     </None>
     <None Include="QLNHTDataSet.xss">
       <DependentUpon>QLNHTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHTDataSet1.xsc">
+      <DependentUpon>QLNHTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNHTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNHTDataSet1.xss">
+      <DependentUpon>QLNHTDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

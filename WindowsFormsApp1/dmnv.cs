@@ -10,21 +10,28 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class dmnh : Form
+    public partial class dmnv : Form
     {
-        public dmnh()
+        public dmnv()
         {
             InitializeComponent();
         }
 
-        private void dmnh_Load(object sender, EventArgs e)
+        private void dmnv_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLNHTDataSet1.tblNhanVien' table. You can move, or remove it, as needed.
+            this.tblNhanVienTableAdapter.Fill(this.qLNHTDataSet1.tblNhanVien);
             // TODO: This line of code loads data into the 'qLNHTDataSet.tblQLNT' table. You can move, or remove it, as needed.
             this.tblQLNTTableAdapter.Fill(this.qLNHTDataSet.tblQLNT);
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
