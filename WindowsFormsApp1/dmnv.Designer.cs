@@ -44,6 +44,12 @@ namespace WindowsFormsApp1
             this.txtDienThoai = new System.Windows.Forms.MaskedTextBox();
             this.txtNgaySinh = new System.Windows.Forms.MaskedTextBox();
             this.grddatanv = new System.Windows.Forms.DataGridView();
+            this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLNHTDataSet1 = new WindowsFormsApp1.QLNHTDataSet1();
             this.btnThem = new System.Windows.Forms.Button();
@@ -56,12 +62,7 @@ namespace WindowsFormsApp1
             this.tblQLNTTableAdapter = new WindowsFormsApp1.QLNHTDataSetTableAdapters.tblQLNTTableAdapter();
             this.tblQLNTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblNhanVienTableAdapter = new WindowsFormsApp1.QLNHTDataSet1TableAdapters.tblNhanVienTableAdapter();
-            this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCapnhat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grddatanv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHTDataSet1)).BeginInit();
@@ -199,6 +200,42 @@ namespace WindowsFormsApp1
             this.grddatanv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grddatanv_CellContentClick);
             this.grddatanv.Click += new System.EventHandler(this.grddatanv_Click);
             // 
+            // MaNhanVien
+            // 
+            this.MaNhanVien.DataPropertyName = "MaNhanVien";
+            this.MaNhanVien.HeaderText = "Mã Nhân Viên";
+            this.MaNhanVien.Name = "MaNhanVien";
+            // 
+            // TenNhanVien
+            // 
+            this.TenNhanVien.DataPropertyName = "TenNhanVien";
+            this.TenNhanVien.HeaderText = "Tên Nhân Viên";
+            this.TenNhanVien.Name = "TenNhanVien";
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.Name = "GioiTinh";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            // 
+            // DienThoai
+            // 
+            this.DienThoai.DataPropertyName = "DienThoai";
+            this.DienThoai.HeaderText = "Điện Thoại";
+            this.DienThoai.Name = "DienThoai";
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            // 
             // tblNhanVienBindingSource
             // 
             this.tblNhanVienBindingSource.DataMember = "tblNhanVien";
@@ -217,6 +254,7 @@ namespace WindowsFormsApp1
             this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -274,47 +312,22 @@ namespace WindowsFormsApp1
             // 
             this.tblNhanVienTableAdapter.ClearBeforeFill = true;
             // 
-            // MaNhanVien
+            // btnCapnhat
             // 
-            this.MaNhanVien.DataPropertyName = "MaNhanVien";
-            this.MaNhanVien.HeaderText = "Mã Nhân Viên";
-            this.MaNhanVien.Name = "MaNhanVien";
-            // 
-            // TenNhanVien
-            // 
-            this.TenNhanVien.DataPropertyName = "TenNhanVien";
-            this.TenNhanVien.HeaderText = "Tên Nhân Viên";
-            this.TenNhanVien.Name = "TenNhanVien";
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.Name = "GioiTinh";
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            // 
-            // DienThoai
-            // 
-            this.DienThoai.DataPropertyName = "DienThoai";
-            this.DienThoai.HeaderText = "Điện Thoại";
-            this.DienThoai.Name = "DienThoai";
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.HeaderText = "Ngày Sinh";
-            this.NgaySinh.Name = "NgaySinh";
+            this.btnCapnhat.Location = new System.Drawing.Point(335, 414);
+            this.btnCapnhat.Name = "btnCapnhat";
+            this.btnCapnhat.Size = new System.Drawing.Size(75, 23);
+            this.btnCapnhat.TabIndex = 18;
+            this.btnCapnhat.Text = "Cập nhật";
+            this.btnCapnhat.UseVisualStyleBackColor = true;
+            this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
             // 
             // dmnv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 450);
+            this.Controls.Add(this.btnCapnhat);
             this.Controls.Add(this.bntClose);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
@@ -382,5 +395,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.Button btnCapnhat;
     }
 }
