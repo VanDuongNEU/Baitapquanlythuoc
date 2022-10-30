@@ -159,6 +159,71 @@ namespace WindowsFormsApp1
             btnCapnhat.Enabled = false;
         }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Ban co chac chan muon xoa ban ghi hien thoi khong? Y/N ?", "Xac nhan yeu cau"
+               , MessageBoxButtons.YesNo
+               , MessageBoxIcon.Question
+               , MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                sql = "Delete from tblNhanVien where MaNhanVien = '" + txtMANV.Text + "'";
+                // Them sua xoa thi dung 3 cau lenh sau
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                // Xoa tai Index cua Row muon xoa
+                grddatanv.Rows.RemoveAt(grddatanv.CurrentRow.Index);
+                NapCT();
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hay thuc hien moi sua soi mong muon tren o luoi, ket thuc bam nut cap nhat",
+               "Thong bao", MessageBoxButtons.OK);
+            btnCapnhat.Enabled = true;
+        }
+
+        private void btnDau_Click(object sender, EventArgs e)
+        {
+            grddatanv.CurrentCell = grddatanv[0, 0];
+            NapCT();
+        }
+
+        private void btnTruoc_Click(object sender, EventArgs e)
+        {
+            i = grddatanv.CurrentRow.Index;
+            if (i > 0)
+            {
+                grddatanv.CurrentCell = grddatanv[0, i - 1];
+            }
+            else
+            {
+                grddatanv.CurrentCell = grddatanv[0, grddatanv.RowCount - 2];
+            }
+            NapCT();
+        }
+
+        private void btnSau_Click(object sender, EventArgs e)
+        {
+            i = grddatanv.CurrentRow.Index;
+            if (i <= grddatanv.RowCount - 2)
+            {
+                grddatanv.CurrentCell = grddatanv[0, i + 1];
+            }
+            else
+            {
+                grddatanv.CurrentCell = grddatanv[0, 0];
+            }
+        }
+
+        private void btnCuoi_Click(object sender, EventArgs e)
+        {
+            i = grddatanv.RowCount;
+            grddatanv.CurrentCell = grddatanv[0, i - 2];
+            NapCT();
+        }
+
         private void NapCT()
         {
             i = grddatanv.CurrentRow.Index;

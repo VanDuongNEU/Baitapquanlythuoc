@@ -63,6 +63,10 @@ namespace WindowsFormsApp1
             this.tblQLNTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblNhanVienTableAdapter = new WindowsFormsApp1.QLNHTDataSet1TableAdapters.tblNhanVienTableAdapter();
             this.btnCapnhat = new System.Windows.Forms.Button();
+            this.btnDau = new System.Windows.Forms.Button();
+            this.btnTruoc = new System.Windows.Forms.Button();
+            this.btnSau = new System.Windows.Forms.Button();
+            this.btnCuoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grddatanv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLNHTDataSet1)).BeginInit();
@@ -193,7 +197,7 @@ namespace WindowsFormsApp1
             this.DienThoai,
             this.NgaySinh});
             this.grddatanv.DataSource = this.tblNhanVienBindingSource;
-            this.grddatanv.Location = new System.Drawing.Point(15, 149);
+            this.grddatanv.Location = new System.Drawing.Point(15, 126);
             this.grddatanv.Name = "grddatanv";
             this.grddatanv.Size = new System.Drawing.Size(662, 243);
             this.grddatanv.TabIndex = 13;
@@ -264,6 +268,7 @@ namespace WindowsFormsApp1
             this.btnSua.TabIndex = 15;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -273,6 +278,7 @@ namespace WindowsFormsApp1
             this.btnXoa.TabIndex = 16;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // bntClose
             // 
@@ -322,11 +328,55 @@ namespace WindowsFormsApp1
             this.btnCapnhat.UseVisualStyleBackColor = true;
             this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
             // 
+            // btnDau
+            // 
+            this.btnDau.Location = new System.Drawing.Point(15, 375);
+            this.btnDau.Name = "btnDau";
+            this.btnDau.Size = new System.Drawing.Size(75, 23);
+            this.btnDau.TabIndex = 19;
+            this.btnDau.Text = "Đầu ";
+            this.btnDau.UseVisualStyleBackColor = true;
+            this.btnDau.Click += new System.EventHandler(this.btnDau_Click);
+            // 
+            // btnTruoc
+            // 
+            this.btnTruoc.Location = new System.Drawing.Point(115, 375);
+            this.btnTruoc.Name = "btnTruoc";
+            this.btnTruoc.Size = new System.Drawing.Size(75, 23);
+            this.btnTruoc.TabIndex = 20;
+            this.btnTruoc.Text = "Trước";
+            this.btnTruoc.UseVisualStyleBackColor = true;
+            this.btnTruoc.Click += new System.EventHandler(this.btnTruoc_Click);
+            // 
+            // btnSau
+            // 
+            this.btnSau.Location = new System.Drawing.Point(226, 375);
+            this.btnSau.Name = "btnSau";
+            this.btnSau.Size = new System.Drawing.Size(75, 23);
+            this.btnSau.TabIndex = 21;
+            this.btnSau.Text = "Sau";
+            this.btnSau.UseVisualStyleBackColor = true;
+            this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
+            // 
+            // btnCuoi
+            // 
+            this.btnCuoi.Location = new System.Drawing.Point(335, 376);
+            this.btnCuoi.Name = "btnCuoi";
+            this.btnCuoi.Size = new System.Drawing.Size(75, 23);
+            this.btnCuoi.TabIndex = 22;
+            this.btnCuoi.Text = "Cuối";
+            this.btnCuoi.UseVisualStyleBackColor = true;
+            this.btnCuoi.Click += new System.EventHandler(this.btnCuoi_Click);
+            // 
             // dmnv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 450);
+            this.Controls.Add(this.btnCuoi);
+            this.Controls.Add(this.btnSau);
+            this.Controls.Add(this.btnTruoc);
+            this.Controls.Add(this.btnDau);
             this.Controls.Add(this.btnCapnhat);
             this.Controls.Add(this.bntClose);
             this.Controls.Add(this.btnXoa);
@@ -396,5 +446,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.Button btnCapnhat;
+        private System.Windows.Forms.Button btnDau;
+        private System.Windows.Forms.Button btnTruoc;
+        private System.Windows.Forms.Button btnSau;
+        private System.Windows.Forms.Button btnCuoi;
     }
 }
